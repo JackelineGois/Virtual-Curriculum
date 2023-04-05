@@ -1,0 +1,21 @@
+.content-skills {
+  color: white;
+  background-color: black;
+  height: 250px;
+  width: 300px;
+  padding: 20px;
+}
+.content-skills h1 {
+  margin-bottom: 25px;
+}
+.icons-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px;
+}
+
+.icons-text h4 {
+  padding: 0px;
+  margin: 10px;
+}

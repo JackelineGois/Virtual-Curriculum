@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fa-bars {
+  font-size: 2rem;
+  color: #fff;
+  position: fixed;
+}
+ul {
+  list-style: none;
+}
+
+.header-menu-responsive {
+  width: 100%;
+  background-color: rgb(24, 23, 23);
+  display: none;
+  color: white;
+}
+
+#btn-menu {
+  display: none;
+}
+.header-menu-responsive header label {
+  display: none;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  background: rgb(24, 23, 23);
+  z-index: 1;
+}
+
+.header-menu-responsive label .site-name {
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.header-menu-responsive label:hover {
+  cursor: pointer;
+}
+.responsive-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.responsive-menu a {
+  border-right: 1px solid #0e0f10;
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.responsive-menu a:last-child {
+  border-right: none;
+}
+.responsive-menu a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+}
+.responsive-menu a:hover > .dropdown {
+  display: inline-block;
+}
+@media (max-width: 770px) {
+  .header-menu-responsive {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: block;
+    height: 57px;
+  }
+  .header-menu-responsive label {
+    display: flex;
+  }
+  .responsive-menu {
+    position: fixed;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    top: 56px;
+    z-index: 1;
+    background-color: rgb(24, 23, 23);
+  }
+  nav a {
+    display: block;
+    border-top: 1px solid #0e0f10;
+  }
+  #btn-menu:checked ~ .responsive-menu {
+    margin: 0;
+  }
+  .container {
+    margin-top: 57px;
+  }
+}
